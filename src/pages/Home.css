@@ -1,0 +1,101 @@
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.section { padding: 4rem 5%; }
+.section--dark { background: var(--black); color: var(--white); }
+.section--grey { background: var(--grey); }
+.section__title { text-align: center; margin-bottom: 2rem; font-size: 2rem; }
+.center { text-align: center; margin-top: 2rem; }
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+    url('/images/hero.jpg') center / cover,
+    var(--charcoal);
+  color: var(--white);
+}
+.hero__content { max-width: 600px; }
+.hero__welcome {
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 1.6rem;
+}
+.hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); letter-spacing: 3px; }
+.hero h2 { font-family: var(--font-body); font-weight: 500; font-size: 1.3rem; margin: 0.5rem 0 1rem; }
+.hero__sub { font-style: italic; margin-bottom: 1.5rem; }
+
+.grid { display: grid; gap: 1.25rem; }
+.grid--services { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.grid--projects { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+/* IMAGE CARDS */
+.card {
+  position: relative;
+  min-height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--charcoal) center / cover;
+  display: flex;
+  align-items: flex-end;
+}
+.card--tall { min-height: 280px; }
+.card__label {
+  width: 100%;
+  padding: 2.5rem 1rem 1rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+.about h2 { color: var(--gold); margin-bottom: 1rem; }
+.about p { margin-bottom: 1.5rem; line-height: 1.7; }
+.about__image {
+  min-height: 280px;
+  border-radius: 8px;
+  background: var(--charcoal) center / cover;
+}
+
+.testimonial {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.7;
+}
+.testimonial cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.cta {
+  padding: 4rem 5%;
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+}
+.cta h2 { color: var(--gold); margin-bottom: 0.75rem; }
+.cta p { margin-bottom: 1.5rem; }
