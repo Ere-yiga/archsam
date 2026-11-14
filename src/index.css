@@ -34,3 +34,45 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.section { padding: 4rem 5%; }
+.section--dark { background: var(--black); color: var(--white); }
+.section--grey { background: var(--grey); }
+.section__title { text-align: center; margin-bottom: 2rem; font-size: 2rem; }
+.center { text-align: center; margin-top: 2rem; }
+
+
+.grid { display: grid; gap: 1.25rem; }
+.grid--services { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.grid--projects { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+
+/* IMAGE CARDS */
+.card {
+  position: relative;
+  min-height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--charcoal) center / cover;
+  display: flex;
+  align-items: flex-end;
+}
+.card--tall { min-height: 280px; }
+.card__label {
+  width: 100%;
+  padding: 2.5rem 1rem 1rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  color: var(--white);
+  font-weight: 600;
+}
