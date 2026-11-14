@@ -1,5 +1,7 @@
-import { Link } from 'react-router'
-import './Home.css'
+import { Link } from "react-router";
+import "./Home.css";
+/* import { services, projects } from "../data/content"; */
+import { projects } from "../data/content";
 
 function Home() {
   return (
@@ -12,23 +14,25 @@ function Home() {
           <p className="hero__sub">
             Sustainable and state of the art designs and construction jobs.
           </p>
-          <Link to="/services" className="btn">Explore Our Services →</Link>
+          <Link to="/services" className="btn">
+            Explore Our Services →
+          </Link>
         </div>
       </section>
 
       <section className="section">
         <h2 className="section__title">Our Services</h2>
-        {/* <div className="grid grid--services">
-          {services.map((s) => (
+        <div className="grid grid--projects">
+          {projects.slice(0, 3).map((p) => (
             <div
-              key={s.title}
-              className="card card--image"
-              style={{ backgroundImage: `url(${s.image})` }}
+              key={p.title}
+              className="card card--image card--tall"
+              style={{ backgroundImage: `url(${p.image})` }}
             >
-              <span className="card__label">{s.title}</span>
+              <span className="card__label">{p.title}</span>
             </div>
           ))}
-        </div> */}
+        </div>
       </section>
 
       {/* ABOUT SNIPPET */}
@@ -40,18 +44,20 @@ function Home() {
             professional firm committed to delivering innovative, sustainable
             and world-class architectural designs and construction services.
           </p>
-          <Link to="/about" className="btn">Learn More →</Link>
+          <Link to="/about" className="btn">
+            Learn More →
+          </Link>
         </div>
         <div
           className="about__image"
-          style={{ backgroundImage: 'url(/images/construction.jpg)' }}
+          style={{ backgroundImage: `url(${projects[1].image})` }}
         />
       </section>
 
       {/* PROJECTS PREVIEW */}
       <section className="section">
         <h2 className="section__title">Our Projects</h2>
-       {/*  <div className="grid grid--projects">
+        <div className="grid grid--projects">
           {projects.map((p) => (
             <div
               key={p.title}
@@ -62,8 +68,11 @@ function Home() {
             </div>
           ))}
         </div>
-        */} <div className="center">
-          <Link to="/projects" className="btn">View All Projects →</Link>
+        {" "}
+        <div className="center">
+          <Link to="/projects" className="btn">
+            View All Projects →
+          </Link>
         </div>
       </section>
 
@@ -71,8 +80,8 @@ function Home() {
       <section className="section section--grey">
         <h2 className="section__title">What Our Clients Say</h2>
         <blockquote className="testimonial">
-          “SAMARCH delivered beyond our expectations. Their professionalism
-          and attention to detail are second to none.”
+          “SAMARCH delivered beyond our expectations. Their professionalism and
+          attention to detail are second to none.”
           <cite>– Dr. Chinwe Dan-echems</cite>
         </blockquote>
       </section>
@@ -81,10 +90,12 @@ function Home() {
       <section className="cta">
         <h2>Let's Build Your Dream Together!</h2>
         <p>Contact us today for your architectural and construction needs.</p>
-        <Link to="/quote" className="btn">Get a Quote →</Link>
+        <Link to="/quote" className="btn">
+          Get a Quote →
+        </Link>
       </section>
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;

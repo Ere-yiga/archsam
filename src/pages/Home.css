@@ -6,7 +6,7 @@
   padding: 0 5%;
   background:
     linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
-    url('/images/hero.jpg') center / cover,
+    url('../assets/images/hero.jpg') center / cover,
     var(--charcoal);
   color: var(--white);
 }
